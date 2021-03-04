@@ -100,7 +100,7 @@ app.listen(PORT, () => {
 The generated PDF should look like this: [Screenshot of html file in chrome at 600px viewport](https://github.com/himalayasingh/pdf-gen-issue-app/blob/master/assets/img/Screenshot%20of%20webpage%20in%20chrome%20at%20600px%20viewport.png) 
 
 In 600px width generated PDF file:
-* the top two lines(containing "click here" links) should be on right
+* the top two lines(containing "click here" links) should be on right side and both links should be clickable
 * "image 1" and "image 3" should be visible
 * "image 5" should be on left side of text next to it
 * "image 6", "image 7" and "image 8" should be on **_one line adjacent to each-other_**.
@@ -111,7 +111,7 @@ In 600px width generated PDF file:
 The generated 600px width PDF looks like this: [PDF generated using Puppeteer](https://github.com/himalayasingh/pdf-gen-issue-app/blob/master/assets/pdf/puppeteer-generated-pdf.pdf)
 
 In generated PDF file:
-* the top two lines(containing "click here" links) are on left side(_which should happen at 599px viewport_)
+* the top two lines(containing "click here" links) are on left side(_which should happen at 599px viewport_) and the first link whose href points to "_**%%view_email_url%%**_" if not clickable.
 * "image 1" and "image 3" are **_invisible_** and "image 2" and "image 4" are **_visible_**(_which should happen at 596px viewport_)
 * "image 5", "image 6", "image 7" and "image 8" are on **_separate lines_**(_which should happen at 599px viewport_).
 
