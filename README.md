@@ -24,7 +24,7 @@ HTML file: [Github link](https://github.com/himalayasingh/pdf-gen-issue-app/blob
 
 **Code which generates the PDF: [Github link](https://github.com/himalayasingh/pdf-gen-issue-app/blob/master/app.js)**
 
-```
+```javascript
 const express = require('express');
 const fs = require('fs');
 const puppeteer = require('puppeteer');
@@ -115,8 +115,10 @@ In generated PDF file:
 * "image 1" and "image 3" are **_invisible_** and "image 2" and "image 4" are **_visible_**(_which should happen at 596px viewport_)
 * "image 5", "image 6", "image 7" and "image 8" are on **_separate lines_**(_which should happen at 599px viewport_).
 
-**CSS rule for the top two lines(containing "click here" links)**
-```
+CSS rules are written in the HTML template itself.
+
+```css
+/* CSS rule for the top two lines(containing "click here" links) */
 @media (max-width: 599px) {
           .trouble {
               text-align: left !important;
@@ -125,8 +127,8 @@ In generated PDF file:
 ```
 
 **CSS rules for image 1, 2, 3 and 4**
-```
-// Styles for "image 2" and "image 4"
+```css
+/* Styles for "image 2" and "image 4" */
 @media only screen and (max-width: 596px) {
           .trigger-mobile {
               display: block !important;
@@ -135,8 +137,8 @@ In generated PDF file:
 }
 ``` 
 
-```
-// Styles for "image 1" and "image 3"
+```css
+/* Styles for "image 1" and "image 3" */
 @media only screen and (max-width: 596px) {
           .trigger-desktop {
               display: none !important;
@@ -146,8 +148,8 @@ In generated PDF file:
 ```
 
 **CSS rules for image 5,6,7 and 8**
-```
-// Styles for "image 5" cover element
+```css
+/* Styles for "image 5" cover element */
 @media (max-width: 599px) {
           .cell1 {
               width: 100% !important;
@@ -156,8 +158,8 @@ In generated PDF file:
 }
 ``` 
 
-```
-// Styles for image 6, 7 and 8 cover element
+```css
+/* Styles for image 6, 7 and 8 cover element */
 @media (max-width: 599px) {
           .tbl {
               width: 100% !important;
@@ -165,3 +167,5 @@ In generated PDF file:
           }
 }
 ```
+
+Thank You
