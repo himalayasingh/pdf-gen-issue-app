@@ -2,7 +2,6 @@
 
 * Puppeteer version: 8.0.0
 * Platform / OS version: Windows 10 Pro
-* GitHub repo for this issue: [Github repo](https://github.com/himalayasingh/pdf-gen-issue-app)
 * Node.js version: 13.7.0
 
 
